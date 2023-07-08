@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ## Colors */
+  /* ### Primary */
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  /* ### Neutral */
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  /* ### Gradients */
+
+  /* --Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+--Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+}
+
+html {
+  min-width: 300px;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  min-width: 300px;
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  position: relative;
+}
+
+.container_logo {
+  width: 100%;
+  padding: 30px 30px 20px;
+  position: absolute;
+  top: 0;
+}
+
+.container_img {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.logo {
+  width: 100px;
+}
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.container_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.container_main.desactived {
+  display: none;
+}
+
+.container_main_hidden {
+  display: none;
+}
+.container_main_hidden.active {
+  display: block;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 40px 50px 20px 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.9375rem;
+  color: rgba(0, 0, 0, 0.77);
+}
+
+.title-span {
+  color: var(--Desaturated-Red);
+  font-weight: 300;
+}
+
+.text {
+  text-align: center;
+  color: var(--Desaturated-Red);
+  padding: 0px 30px 30px 30px;
+  line-height: 20px;
+  font-size: 0.9rem;
+}
+
+.input-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid rgba(128, 128, 128, 0.913);
+  border-radius: 30px;
+}
+
+input {
+  width: 80%;
+  padding: 0.9375rem;
+  border: none;
+  outline: none;
+  margin-right: auto;
+  border-radius: 30px;
+}
+input:focus {
+  outline: none;
+}
+button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  right: -2px;
+  text-align: center;
+  top: -1px;
+  bottom: -1px;
+  width: 70px;
+  height: 48px;
+  border-radius: 30px;
+  border-style: none;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+.button:active {
+  background-image: linear-gradient(
+    135deg,
+    hsla(0, 80%, 86%, 0.344),
+    hsla(0, 74%, 74%, 0.516)
+  );
+}
+
+.error {
+  position: absolute;
+  right: 80px;
+  top: 10px;
+  display: none;
+}
+.valid_email {
+  margin-top: 10px;
+  color: var(--Desaturated-Red);
+  display: none;
+}
+.email {
+  color: black;
+}
+
+@media (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: minmax(400px, 1fr) minmax(200px, 40%);
+    padding: 0px 0 0 150px;
+  }
+
+  .container_img {
+    grid-column: 2;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+  .container_main {
+    grid-column: 1;
+    grid-row: 1;
+    height: 100%;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  .container_logo {
+    margin: 50px 0 100px 0;
+    position: initial;
+  }
+  .logo {
+    width: 200px;
+  }
+
+  .container_main > * {
+    text-align: left;
+    padding: 0;
+  }
+
+  .title {
+    font-size: 4rem;
+    margin: 20px 0 40px 0;
+    max-width: 25rem;
+  }
+  .text {
+    font-size: 1rem;
+    line-height: 1.875rem;
+    margin-bottom: 3.125rem;
+    max-width: 25rem;
+  }
+
+  .container_main_hidden {
+    grid-row: 1;
+    height: 100%;
+    padding: 0px 0 0 100px;
+  }
+
+  .container_main_hidden > * {
+    text-align: left;
+    padding: 0;
+  }
+
+  .container_main_hidden.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-container {
+    width: 50%;
+    min-width: 400px;
+  }
+}

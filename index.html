@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container_img">
+        <picture>
+          <source media="(max-width:700px)" srcset="images/hero-mobile.jpg" />
+          <img src="images/hero-desktop.jpg" alt="img_woman" class="img" />
+        </picture>
+      </div>
+      <div class="container_main">
+        <div class="container_logo">
+          <img src="images/logo.svg" alt="logo" class="logo" />
+        </div>
+
+        <h1 class="title"><span class="title-span">We're</span> coming soon</h1>
+        <p class="text">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <div class="input-container">
+          <input type="email" placeholder="Email Address" name="" id="input" />
+          <button class="button">
+            <img src="images/icon-arrow.svg" alt="arrow" class="arrow" />
+          </button>
+          <img src="images/icon-error.svg" class="error" alt="icon_error" />
+        </div>
+        <span class="valid_email">*You must enter a valid email address !</span>
+      </div>
+      <div class="container_main_hidden">
+        <div class="container_logo">
+          <img src="images/logo.svg" alt="logo" class="logo" />
+        </div>
+        <h1 class="title"><span class="title-span">thank</span> you</h1>
+        <p class="text">
+          Shortly we will send you an email "<span class="email"></span>" to
+          confirm your account, once confirmed we will send you a 10% discount
+          coupon as a token of our appreciation and welcome.
+        </p>
+      </div>
+    </main>
+
+ 
+    <script src="index.js"></script>
+  </body>
+</html>
